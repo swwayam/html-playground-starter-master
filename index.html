@@ -1,0 +1,59 @@
+<!doctype HTML>
+<html>
+	<head>
+		<title>codedamn HTML Playground</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/style.css" />
+	</head>
+	<body>
+		<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+			<div class="container-fluid">
+				<a class="navbar-brand">ADs Editor</a>
+				<div>
+					<button class="btn btn-outline-success mx-2" type="submit">Image</button>
+					<button class="btn btn-outline-success" type="submit">About</button>
+				</div>
+			</div>
+		</nav>
+	
+		<main>
+			<div>
+				<div class="div">
+					<label for="">Heading</label>
+					<br>
+					<input type="text" class="inp" id="heading" name="heading" oninput="changeHeading()">
+					<input type="text" id="heading-size" oninput="headingSizeChange()">
+				</div>
+				<div class="div">
+					<label for="">Sub-Heading</label>
+					<br>
+					<input type="text" name="sub-heading" id="sub-heading" oninput="changeSubHeading()">
+					<input type="text" id="sub-heading-size" oninput="subHeadingSizeChange()">
+	
+				</div>
+	
+				<div class="div">
+					<label for="">Btn Text</label>
+					<br>
+					<input type="text" name="btn-txt" id="btn" oninput="changeButtonText()">
+					<input type="text" id="btn-size" oninput="btnSizeChange()">
+	
+				</div>
+	
+				<!--  <iframe src="./template.html" id="iframe1" width="300" height="250" frameborder="0"></iframe> -->
+	
+				<button onclick="btn()">Reset</button>
+			</div>
+	
+			<div>
+				<iframe src="./template.html" width="400" id="iframe" height="350" frameborder="0"></iframe>
+			</div>
+	
+	
+		</main>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css
+		">
+		<script src="/script.js"></script>
+	</body>
+</html>
