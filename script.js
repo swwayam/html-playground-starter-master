@@ -39,3 +39,10 @@ function getInput(){
     console.log(heading.value)
     return heading.value
 }
+
+
+// Do not change the below code
+
+function getData(){
+	return data
+}
