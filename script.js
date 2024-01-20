@@ -24,3 +24,11 @@ function changeSubHeadingSize() {}
 function changeBtnText() {}
 
 function changeBtnTextSize() {}
+
+
+// Function to take input from heading and return its value
+function getInput(){
+    // check in console for values
+    console.log(heading.value)
+    return heading.value
+}
