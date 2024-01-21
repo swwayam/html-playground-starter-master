@@ -35,8 +35,7 @@ iframe.onload = function () {
     // Pusing the object into an array for later use.
     data.push(obj);
 
-	// Calling set Data to update the input fields
-	setData()
+	// call set Data to update the input fields
   });
 };
 
