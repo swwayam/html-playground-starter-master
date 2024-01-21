@@ -35,24 +35,33 @@ iframe.onload = function () {
     // Pusing the object into an array for later use.
     data.push(obj);
 
-	// call set Data to update the input fields
+	// Calling set Data to update the input fields
+	setData()
   });
 };
+
+
+
+
+function setData() {
+	for (const el of data) {
+		if (el.element == "heading") {
+			heading.value = el.value
+			headingSize.value = el.size
+		} else if (el.element == "sub-heading") {
+			subHeading.value = el.value
+			subHeadingSize.value = el.size
+		} else if (el.element == "btn") {
+			btn.value = el.value
+			btnSize.value = el.size    
+		}
+	}
+}
+
 
 /**
  *
  * Write your code below this line
- */
-
-
-function setData() {
-	
-}
-
-/**
- *
- * Write you code above this line
- *
  */
 
 // Functions to perform edit operations
@@ -69,6 +78,14 @@ function changeSubHeadingSize() {}
 function changeBtnText() {}
 
 function changeBtnTextSize() {}
+
+/**
+ *
+ * Write you code above this line
+ *
+ */
+
+
 
 // Function to take input from heading and return its value
 function getInput() {
