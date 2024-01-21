@@ -10,12 +10,16 @@ const btnSize = document.getElementById("btn-size");
 
 const iframe = document.getElementById("iframe");
 
+const data = []
+
+let editableFrame;
+
 // Write your code below this line -
 iframe.onload = function () {
   // Selecting the document inside of iframe
   editableFrame = iframe.contentDocument.body;
   // Getting all the id's that start with ad_
-  elements = editableFrame.querySelectorAll('[id^="ad_"]');
+  const elements = editableFrame.querySelectorAll('[id^="ad_"]');
 
   // Looping the each of the editable element and extracting the required information
   elements.forEach((element) => {
@@ -30,6 +34,9 @@ iframe.onload = function () {
 
     // Pusing the object into an array for later use.
     data.push(obj);
+
+	// Calling set Data to update the input fields
+	setData()
   });
 };
 
@@ -38,14 +45,19 @@ iframe.onload = function () {
  * Write your code below this line
  */
 
-// Functions to perform operations
-function setData() {}
+
+function setData() {
+	
+}
 
 /**
  *
  * Write you code above this line
  *
  */
+
+// Functions to perform edit operations
+
 
 function changeHeading() {}
 
