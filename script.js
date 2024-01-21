@@ -12,35 +12,40 @@ const iframe = document.getElementById("iframe");
 
 // Write your code below this line -
 iframe.onload = function () {
-	// Selecting the document inside of iframe
-	editableFrame = iframe.contentDocument.body;
-	// Getting all the id's that start with ad_
-	elements = editableFrame.querySelectorAll('[id^="ad_"]');
+  // Selecting the document inside of iframe
+  editableFrame = iframe.contentDocument.body;
+  // Getting all the id's that start with ad_
+  elements = editableFrame.querySelectorAll('[id^="ad_"]');
 
-	// Looping the each of the editable element and extracting the required information
-	elements.forEach(element => {
+  // Looping the each of the editable element and extracting the required information
+  elements.forEach((element) => {
+    let obj = {
+      // this gives us name of the element - ad_heading -> heading
+      element: element.id.split("_")[1],
+      // access to the text
+      value: element.innerHTML,
+      // access to the fontsize
+      size: window.getComputedStyle(element).fontSize,
+    };
 
-		let obj = {
-			// this gives us name of the element - ad_heading -> heading
-			element: element.id.split("_")[1],
-			// access to the text
-			value: element.innerHTML,
-			// access to the fontsize
-			size: window.getComputedStyle(element).fontSize
-		}
-
-		// Pusing the object into an array for later use.
-		data.push(obj)
-	});
-
+    // Pusing the object into an array for later use.
+    data.push(obj);
+  });
 };
 
+/**
+ *
+ * Write your code below this line
+ */
 
-
-
-
-// Functions to perform operations 
+// Functions to perform operations
 function setData() {}
+
+/**
+ *
+ * Write you code above this line
+ *
+ */
 
 function changeHeading() {}
 
@@ -54,17 +59,9 @@ function changeBtnText() {}
 
 function changeBtnTextSize() {}
 
-
 // Function to take input from heading and return its value
-function getInput(){
-    // check in console for values
-    console.log(heading.value)
-    return heading.value
-}
-
-
-// Do not change the below code
-
-function getData(){
-	return data
+function getInput() {
+  // check in console for values
+  console.log(heading.value);
+  return heading.value;
 }
