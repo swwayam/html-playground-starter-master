@@ -50,6 +50,3 @@ function getData(){
 	return data
 }
 
-function getVar(){
-	return editableFrame;
-}
