@@ -13,7 +13,7 @@ const iframe = document.getElementById("iframe");
 // Write your code below this line -
 
 
-
+	
 
 
 
@@ -45,4 +45,8 @@ function getInput(){
 
 function getData(){
 	return data
+}
+
+function getVar(){
+	return editableFrame;
 }
